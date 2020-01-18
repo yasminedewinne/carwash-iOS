@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dIW-tV-wCs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Home-->
+        <scene sceneID="bO4-G8-BNA">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="436-1v-0iV" customClass="CarwashViewController" customModule="Carwash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M3R-xl-EkY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Si1-bg-gAB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="car" catalog="system" id="5B9-qY-K1g"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PsF-jh-jwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1278" y="-988"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="qaZ-rI-4UR">
+            <objects>
+                <viewController id="9YX-Au-2kj" customClass="SearchViewController" customModule="Carwash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="72R-Or-2Gj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="POQ-88-pKP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="fRo-IY-n96"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EFf-Zp-xId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1277" y="-281"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZOT-9W-ZHa">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pTS-Ug-ObB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FCG-UO-Xor">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="436-1v-0iV" kind="relationship" relationship="viewControllers" id="0Fp-bv-iMg"/>
+                        <segue destination="9YX-Au-2kj" kind="relationship" relationship="viewControllers" id="Bo1-zu-7oZ"/>
+                        <segue destination="iLQ-GT-DO4" kind="relationship" relationship="viewControllers" id="A6z-ct-u9V"/>
+                        <segue destination="TNU-AY-TaC" kind="relationship" relationship="viewControllers" id="M8K-EX-PwH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Mo-PS-qZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--New-->
+        <scene sceneID="iFm-IL-SLS">
+            <objects>
+                <viewController id="iLQ-GT-DO4" customClass="NewViewController" customModule="Carwash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N6A-oj-P4v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="w5l-Jm-YtN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="New" image="plus.app" catalog="system" id="gwF-v4-Clk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGN-v1-2jR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="457"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="b0u-5n-ETG">
+            <objects>
+                <viewController id="TNU-AY-TaC" customClass="ProfileViewController" customModule="Carwash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CSq-Tf-fQB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="l2N-3k-a5W"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="yHx-Bl-Zyn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFu-Ar-ESc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1299" y="1225"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="8Iq-YQ-uXg">
+            <objects>
+                <viewController id="dIW-tV-wCs" customClass="LoginViewController" customModule="Carwash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ik1-ei-KSS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Pwi-SG-FVk"/>
+                    </view>
+                    <connections>
+                        <segue destination="pTS-Ug-ObB" kind="presentation" identifier="MeldAan" modalPresentationStyle="fullScreen" id="Gui-2f-jfZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJJ-E0-nUU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-906" y="130"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="car" catalog="system" width="64" height="46"/>
+        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="plus.app" catalog="system" width="64" height="56"/>
+    </resources>
 </document>
