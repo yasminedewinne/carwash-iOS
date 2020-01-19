@@ -45,6 +45,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pTS-Ug-ObB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FCG-UO-Xor">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -98,11 +99,52 @@
                     <view key="view" contentMode="scaleToFill" id="Ik1-ei-KSS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yob-Ng-fda">
+                                <rect key="frame" x="10" y="94" width="394" height="68"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rVU-uc-AEa">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="68"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="A7n-qh-S8K" userLabel="E-mail Text Field">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EV5-RC-KPn" userLabel="Password Text Field">
+                                                <rect key="frame" x="0.0" y="34" width="394" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fO9-Uy-oOP">
+                                <rect key="frame" x="186" y="453" width="42" height="30"/>
+                                <state key="normal" title="Log in"/>
+                                <connections>
+                                    <action selector="LogInClicked" destination="dIW-tV-wCs" eventType="touchUpInside" id="G1s-zI-eW2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fO9-Uy-oOP" firstAttribute="centerX" secondItem="Ik1-ei-KSS" secondAttribute="centerX" id="8ym-Hl-uvB"/>
+                            <constraint firstItem="Yob-Ng-fda" firstAttribute="top" secondItem="Pwi-SG-FVk" secondAttribute="top" constant="50" id="9U6-aL-qqJ"/>
+                            <constraint firstItem="fO9-Uy-oOP" firstAttribute="centerY" secondItem="Ik1-ei-KSS" secondAttribute="centerY" constant="20" id="ONa-KU-pLR"/>
+                            <constraint firstItem="Yob-Ng-fda" firstAttribute="leading" secondItem="Pwi-SG-FVk" secondAttribute="leading" constant="10" id="Oyi-lo-VTk"/>
+                            <constraint firstItem="Pwi-SG-FVk" firstAttribute="trailing" secondItem="Yob-Ng-fda" secondAttribute="trailing" constant="10" id="n6v-K7-Kht"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Pwi-SG-FVk"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="pTS-Ug-ObB" kind="presentation" identifier="MeldAan" modalPresentationStyle="fullScreen" id="Gui-2f-jfZ"/>
+                        <outlet property="emailTextField" destination="A7n-qh-S8K" id="cfk-Dx-3Gi"/>
+                        <outlet property="logInButton" destination="fO9-Uy-oOP" id="Beb-Us-7dE"/>
+                        <outlet property="wachtwoordTextField" destination="EV5-RC-KPn" id="aNz-6w-JES"/>
+                        <segue destination="pTS-Ug-ObB" kind="presentation" identifier="LogIn" modalPresentationStyle="fullScreen" id="Gui-2f-jfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJJ-E0-nUU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

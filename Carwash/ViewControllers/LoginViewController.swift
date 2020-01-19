@@ -10,21 +10,33 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var wachtwoordTextField: UITextField!
+    @IBOutlet var logInButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func LogInClicked() {
+        
+        APIClient.shared.login(Login(email: emailTextField.text!, password: wachtwoordTextField.text!)){
+            (statusCode) in
+            if statusCode != nil && statusCode != 400{
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "LogIn", sender: self)
+                }
+            }else{
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Watch out", message: "The email or password is not correct", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                    
+                    self.present(alert, animated: true)
+                    self.emailTextField.text = ""
+                    self.wachtwoordTextField.text = ""
+                }
+            }
+        }
     }
-    */
-
 }
