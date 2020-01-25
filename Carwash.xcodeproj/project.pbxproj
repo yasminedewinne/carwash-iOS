@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		219ADF52D63059297F976B29 /* Pods_Carwash_CarwashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AADF1EE737724047569ABF /* Pods_Carwash_CarwashUITests.framework */; };
 		6D30E68523D3109E0011A965 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30E68423D3109E0011A965 /* Login.swift */; };
-		6D30E68723D31A6F0011A965 /* CarwashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30E68623D31A6F0011A965 /* CarwashViewController.swift */; };
 		6D30E68923D31CC80011A965 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30E68823D31CC80011A965 /* SearchViewController.swift */; };
 		6D30E68B23D31DB70011A965 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30E68A23D31DB70011A965 /* NewViewController.swift */; };
 		6D30E68D23D31E720011A965 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30E68C23D31E720011A965 /* ProfileViewController.swift */; };
@@ -20,8 +20,17 @@
 		6D588FED23D2203D006DEB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D588FEB23D2203D006DEB85 /* LaunchScreen.storyboard */; };
 		6D588FF823D2203D006DEB85 /* CarwashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D588FF723D2203D006DEB85 /* CarwashTests.swift */; };
 		6D58900323D2203D006DEB85 /* CarwashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D58900223D2203D006DEB85 /* CarwashUITests.swift */; };
+		6D78029523DC9F1300855424 /* Adres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D78029423DC9F1300855424 /* Adres.swift */; };
+		6D78029723DCA53100855424 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D78029623DCA53100855424 /* User.swift */; };
 		6DB6691723D2314E0032E998 /* Carwash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6691623D2314E0032E998 /* Carwash.swift */; };
 		6DBA9EC823D360660075EC4F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9EC723D360660075EC4F /* APIClient.swift */; };
+		6DBA9ECC23D45C230075EC4F /* CarwashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9ECB23D45C230075EC4F /* CarwashTableViewController.swift */; };
+		6DBA9ECF23D45EC20075EC4F /* CarwashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9ECE23D45EC20075EC4F /* CarwashTableViewCell.swift */; };
+		6DBA9ED223D477300075EC4F /* CarwashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9ED123D477300075EC4F /* CarwashController.swift */; };
+		6DBA9ED423D477B10075EC4F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9ED323D477B10075EC4F /* Repository.swift */; };
+		6DBA9ED623D47C890075EC4F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9ED523D47C890075EC4F /* Reachability.swift */; };
+		E219D9291AE682EBD71FFD72 /* Pods_CarwashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8582B74417936F014E41ED2E /* Pods_CarwashTests.framework */; };
+		E72BC7BAE546B724226CF69F /* Pods_Carwash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE0495755FB2AA34F467C79 /* Pods_Carwash.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +51,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09AADF1EE737724047569ABF /* Pods_Carwash_CarwashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carwash_CarwashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11EF68113072648686787485 /* Pods-Carwash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carwash.debug.xcconfig"; path = "Target Support Files/Pods-Carwash/Pods-Carwash.debug.xcconfig"; sourceTree = "<group>"; };
+		1A1207D20F3625C712D2E40B /* Pods-CarwashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarwashTests.release.xcconfig"; path = "Target Support Files/Pods-CarwashTests/Pods-CarwashTests.release.xcconfig"; sourceTree = "<group>"; };
+		1DE0495755FB2AA34F467C79 /* Pods_Carwash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carwash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E26DFF722E2D0CD558ADEEF /* Pods-Carwash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carwash.release.xcconfig"; path = "Target Support Files/Pods-Carwash/Pods-Carwash.release.xcconfig"; sourceTree = "<group>"; };
+		5E664F20DC0C04B78307E45C /* Pods-CarwashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarwashTests.debug.xcconfig"; path = "Target Support Files/Pods-CarwashTests/Pods-CarwashTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6616EEA649E3AB702E3B8277 /* Pods-Carwash-CarwashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carwash-CarwashUITests.release.xcconfig"; path = "Target Support Files/Pods-Carwash-CarwashUITests/Pods-Carwash-CarwashUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6B82389FF06562B6DE0F9453 /* Pods-Carwash-CarwashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carwash-CarwashUITests.debug.xcconfig"; path = "Target Support Files/Pods-Carwash-CarwashUITests/Pods-Carwash-CarwashUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D30E68423D3109E0011A965 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		6D30E68623D31A6F0011A965 /* CarwashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarwashViewController.swift; sourceTree = "<group>"; };
 		6D30E68823D31CC80011A965 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6D30E68A23D31DB70011A965 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		6D30E68C23D31E720011A965 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +77,16 @@
 		6D588FFE23D2203D006DEB85 /* CarwashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarwashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D58900223D2203D006DEB85 /* CarwashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarwashUITests.swift; sourceTree = "<group>"; };
 		6D58900423D2203D006DEB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D78029423DC9F1300855424 /* Adres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adres.swift; sourceTree = "<group>"; };
+		6D78029623DCA53100855424 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6DB6691623D2314E0032E998 /* Carwash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carwash.swift; sourceTree = "<group>"; };
 		6DBA9EC723D360660075EC4F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		6DBA9ECB23D45C230075EC4F /* CarwashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarwashTableViewController.swift; sourceTree = "<group>"; };
+		6DBA9ECE23D45EC20075EC4F /* CarwashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarwashTableViewCell.swift; sourceTree = "<group>"; };
+		6DBA9ED123D477300075EC4F /* CarwashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarwashController.swift; sourceTree = "<group>"; };
+		6DBA9ED323D477B10075EC4F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		6DBA9ED523D47C890075EC4F /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		8582B74417936F014E41ED2E /* Pods_CarwashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarwashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E72BC7BAE546B724226CF69F /* Pods_Carwash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E219D9291AE682EBD71FFD72 /* Pods_CarwashTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				219ADF52D63059297F976B29 /* Pods_Carwash_CarwashUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +124,8 @@
 				6D588FF623D2203D006DEB85 /* CarwashTests */,
 				6D58900123D2203D006DEB85 /* CarwashUITests */,
 				6D588FDE23D2203B006DEB85 /* Products */,
+				8DC43B6648BF325B6681A014 /* Pods */,
+				C6C32CDE1AC0396D26EDF995 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +142,8 @@
 		6D588FDF23D2203B006DEB85 /* Carwash */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA9ED023D476EC0075EC4F /* Controllers */,
+				6DBA9ECD23D45E840075EC4F /* TableViewCells */,
 				6DBA9EC623D35F0C0075EC4F /* Service */,
 				6DB6691523D230740032E998 /* ViewControllers */,
 				6DB6691423D2305A0032E998 /* Models */,
@@ -122,6 +153,7 @@
 				6D588FE923D2203D006DEB85 /* Assets.xcassets */,
 				6D588FEB23D2203D006DEB85 /* LaunchScreen.storyboard */,
 				6D588FEE23D2203D006DEB85 /* Info.plist */,
+				6DBA9ED523D47C890075EC4F /* Reachability.swift */,
 			);
 			path = Carwash;
 			sourceTree = "<group>";
@@ -149,6 +181,8 @@
 			children = (
 				6DB6691623D2314E0032E998 /* Carwash.swift */,
 				6D30E68423D3109E0011A965 /* Login.swift */,
+				6D78029423DC9F1300855424 /* Adres.swift */,
+				6D78029623DCA53100855424 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,11 +190,11 @@
 		6DB6691523D230740032E998 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6D30E68623D31A6F0011A965 /* CarwashViewController.swift */,
 				6D30E68823D31CC80011A965 /* SearchViewController.swift */,
 				6D30E68A23D31DB70011A965 /* NewViewController.swift */,
 				6D30E68C23D31E720011A965 /* ProfileViewController.swift */,
 				6D30E68E23D3227B0011A965 /* LoginViewController.swift */,
+				6DBA9ECB23D45C230075EC4F /* CarwashTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -169,8 +203,48 @@
 			isa = PBXGroup;
 			children = (
 				6DBA9EC723D360660075EC4F /* APIClient.swift */,
+				6DBA9ED323D477B10075EC4F /* Repository.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		6DBA9ECD23D45E840075EC4F /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA9ECE23D45EC20075EC4F /* CarwashTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		6DBA9ED023D476EC0075EC4F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA9ED123D477300075EC4F /* CarwashController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8DC43B6648BF325B6681A014 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11EF68113072648686787485 /* Pods-Carwash.debug.xcconfig */,
+				5E26DFF722E2D0CD558ADEEF /* Pods-Carwash.release.xcconfig */,
+				6B82389FF06562B6DE0F9453 /* Pods-Carwash-CarwashUITests.debug.xcconfig */,
+				6616EEA649E3AB702E3B8277 /* Pods-Carwash-CarwashUITests.release.xcconfig */,
+				5E664F20DC0C04B78307E45C /* Pods-CarwashTests.debug.xcconfig */,
+				1A1207D20F3625C712D2E40B /* Pods-CarwashTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C6C32CDE1AC0396D26EDF995 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DE0495755FB2AA34F467C79 /* Pods_Carwash.framework */,
+				09AADF1EE737724047569ABF /* Pods_Carwash_CarwashUITests.framework */,
+				8582B74417936F014E41ED2E /* Pods_CarwashTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +254,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D58900723D2203D006DEB85 /* Build configuration list for PBXNativeTarget "Carwash" */;
 			buildPhases = (
+				319AF2C9AEE0B0CFC6093A6A /* [CP] Check Pods Manifest.lock */,
 				6D588FD923D2203B006DEB85 /* Sources */,
 				6D588FDA23D2203B006DEB85 /* Frameworks */,
 				6D588FDB23D2203B006DEB85 /* Resources */,
@@ -197,6 +272,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D58900A23D2203D006DEB85 /* Build configuration list for PBXNativeTarget "CarwashTests" */;
 			buildPhases = (
+				D9F5E542ADED0B9D4C5FF9DB /* [CP] Check Pods Manifest.lock */,
 				6D588FEF23D2203D006DEB85 /* Sources */,
 				6D588FF023D2203D006DEB85 /* Frameworks */,
 				6D588FF123D2203D006DEB85 /* Resources */,
@@ -215,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D58900D23D2203D006DEB85 /* Build configuration list for PBXNativeTarget "CarwashUITests" */;
 			buildPhases = (
+				CD74BBF67D9A055CAB34EA8E /* [CP] Check Pods Manifest.lock */,
 				6D588FFA23D2203D006DEB85 /* Sources */,
 				6D588FFB23D2203D006DEB85 /* Frameworks */,
 				6D588FFC23D2203D006DEB85 /* Resources */,
@@ -299,17 +376,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		319AF2C9AEE0B0CFC6093A6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Carwash-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD74BBF67D9A055CAB34EA8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Carwash-CarwashUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9F5E542ADED0B9D4C5FF9DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarwashTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6D588FD923D2203B006DEB85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBA9ED623D47C890075EC4F /* Reachability.swift in Sources */,
 				6D30E68F23D3227B0011A965 /* LoginViewController.swift in Sources */,
 				6D30E68923D31CC80011A965 /* SearchViewController.swift in Sources */,
 				6D30E68523D3109E0011A965 /* Login.swift in Sources */,
+				6D78029723DCA53100855424 /* User.swift in Sources */,
+				6DBA9ED423D477B10075EC4F /* Repository.swift in Sources */,
+				6D78029523DC9F1300855424 /* Adres.swift in Sources */,
 				6DBA9EC823D360660075EC4F /* APIClient.swift in Sources */,
+				6DBA9ECC23D45C230075EC4F /* CarwashTableViewController.swift in Sources */,
+				6DBA9ECF23D45EC20075EC4F /* CarwashTableViewCell.swift in Sources */,
 				6D30E68B23D31DB70011A965 /* NewViewController.swift in Sources */,
-				6D30E68723D31A6F0011A965 /* CarwashViewController.swift in Sources */,
+				6DBA9ED223D477300075EC4F /* CarwashController.swift in Sources */,
 				6DB6691723D2314E0032E998 /* Carwash.swift in Sources */,
 				6D588FE123D2203B006DEB85 /* AppDelegate.swift in Sources */,
 				6D30E68D23D31E720011A965 /* ProfileViewController.swift in Sources */,
@@ -484,6 +636,7 @@
 		};
 		6D58900823D2203D006DEB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11EF68113072648686787485 /* Pods-Carwash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -501,6 +654,7 @@
 		};
 		6D58900923D2203D006DEB85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E26DFF722E2D0CD558ADEEF /* Pods-Carwash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -518,6 +672,7 @@
 		};
 		6D58900B23D2203D006DEB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E664F20DC0C04B78307E45C /* Pods-CarwashTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -539,6 +694,7 @@
 		};
 		6D58900C23D2203D006DEB85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A1207D20F3625C712D2E40B /* Pods-CarwashTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -560,6 +716,7 @@
 		};
 		6D58900E23D2203D006DEB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B82389FF06562B6DE0F9453 /* Pods-Carwash-CarwashUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -579,6 +736,7 @@
 		};
 		6D58900F23D2203D006DEB85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6616EEA649E3AB702E3B8277 /* Pods-Carwash-CarwashUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
