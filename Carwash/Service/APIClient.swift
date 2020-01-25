@@ -24,12 +24,10 @@ class APIClient{
         let task = URLSession.shared.dataTask(with: request){
             (data, response, error) in
             let jsonDecoder = JSONDecoder()
-            if let data = data{
-                print("data: \(data)")
-                if let carwashes = try? jsonDecoder.decode([Carwash].self, from: data){
-                    print("cars: \(carwashes)")
-                    completion(carwashes)
-                }
+            if let data = data, let carwashes = try? jsonDecoder.decode([Carwash].self, from: data){
+                completion(carwashes)
+                print(data)
+                print("cars \(carwashes)")
             }else{
                 print("nil")
                 completion(nil)

@@ -27,6 +27,6 @@ class CarwashTableViewCell: UITableViewCell {
         dateFormatter.timeStyle = .short
         
         autoLabel.text = carwash.auto
-        datumLabel.text = dateFormatter.string(from: carwash.datumEnUur)
+        //datumLabel.text = dateFormatter.string(from: carwash.datumEnUur)
     }
 }

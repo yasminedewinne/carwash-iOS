@@ -10,30 +10,27 @@ import Foundation
 
 struct Carwash: Codable{
     var id: Int
-    var aanbiederId: Int
-    var aanbieder: User
     var auto: String
+    var stad: String
     var tarief: Double
     var takenUitleg: String
-    var datumEnUur: Date
+    //var datumEnUur: NSDate
     
     enum CodingKeys: String, CodingKey{
         case id
-        case aanbiederId
-        case aanbieder
         case auto
+        case stad
         case tarief
         case takenUitleg
-        case datumEnUur
+        //case datumEnUur
     }
     
-    init(id: Int, aanbiederId: Int, aanbieder: User,auto: String, tarief: Double, uitleg: String, datumEnUur: Date) {
+    init(id: Int,auto: String, stad: String, tarief: Double, uitleg: String) {
         self.id = id
-        self.aanbiederId = aanbiederId
-        self.aanbieder = aanbieder
         self.auto = auto
+        self.stad = stad
         self.tarief = tarief
         self.takenUitleg = uitleg
-        self.datumEnUur = datumEnUur
+        //self.datumEnUur = datumEnUur
     }
 }
