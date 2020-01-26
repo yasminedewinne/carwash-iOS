@@ -81,20 +81,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rate in €" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dBc-FQ-TQx" userLabel="Rate Text Field">
-                                                    <rect key="frame" x="5" y="5" width="404" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <action selector="textEditingChanged:" destination="7Nk-N9-q4C" eventType="editingChanged" id="Z5Q-3P-CZW"/>
-                                                    </connections>
-                                                </textField>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tce-Uz-Gg3">
+                                                    <rect key="frame" x="5" y="5" width="404" height="33.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 5 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3t-ia-BFE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="31.5" height="33.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="4pU-eu-Cfu">
+                                                            <rect key="frame" x="29.5" y="0.0" width="376.5" height="34.5"/>
+                                                            <connections>
+                                                                <action selector="sliderAdaptsLabel:" destination="7Nk-N9-q4C" eventType="valueChanged" id="UfM-Wz-G56"/>
+                                                            </connections>
+                                                        </slider>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="4pU-eu-Cfu" firstAttribute="leading" secondItem="u3t-ia-BFE" secondAttribute="trailing" constant="25" id="Zed-Vs-pKw"/>
+                                                        <constraint firstItem="u3t-ia-BFE" firstAttribute="leading" secondItem="Tce-Uz-Gg3" secondAttribute="leading" constant="10" id="xCa-uH-EJP"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="dBc-FQ-TQx" secondAttribute="bottom" constant="5" id="Cv0-Iw-gW9"/>
-                                                <constraint firstAttribute="trailing" secondItem="dBc-FQ-TQx" secondAttribute="trailing" constant="5" id="SWq-bX-FUK"/>
-                                                <constraint firstItem="dBc-FQ-TQx" firstAttribute="top" secondItem="dEl-4k-0fh" secondAttribute="top" constant="5" id="WeN-hS-HoU"/>
-                                                <constraint firstItem="dBc-FQ-TQx" firstAttribute="leading" secondItem="dEl-4k-0fh" secondAttribute="leading" constant="5" id="xTy-Ds-Yxq"/>
+                                                <constraint firstItem="Tce-Uz-Gg3" firstAttribute="leading" secondItem="dEl-4k-0fh" secondAttribute="leading" constant="5" id="GfX-ln-gHY"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tce-Uz-Gg3" secondAttribute="bottom" constant="5" id="IY6-jo-mtY"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tce-Uz-Gg3" secondAttribute="trailing" constant="5" id="RIB-MM-3TQ"/>
+                                                <constraint firstItem="Tce-Uz-Gg3" firstAttribute="top" secondItem="dEl-4k-0fh" secondAttribute="top" constant="5" id="ZNk-hK-8s1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -142,7 +155,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="EJ2-V2-W3e">
                             <connections>
-                                <segue destination="PmW-WK-t8w" kind="unwind" identifier="saveUnWind" unwindAction="unwindToCarwashTableViewWithSegue:" id="tLA-W5-0GG"/>
+                                <segue destination="PmW-WK-t8w" kind="unwind" identifier="saveUnwind" unwindAction="unwindToCarwashTableViewWithSegue:" id="tLA-W5-0GG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -151,7 +164,8 @@
                         <outlet property="saveButton" destination="EJ2-V2-W3e" id="AgV-kr-cJU"/>
                         <outlet property="stadTextField" destination="kev-VL-o3o" id="vaw-oP-l2j"/>
                         <outlet property="takenUitlegTextField" destination="ymZ-O3-3ph" id="nEx-Bd-qgn"/>
-                        <outlet property="tariefTextField" destination="dBc-FQ-TQx" id="FBi-wA-QSE"/>
+                        <outlet property="tariefLabel" destination="u3t-ia-BFE" id="3EK-Pa-QAV"/>
+                        <outlet property="tariefSlider" destination="4pU-eu-Cfu" id="h5w-pg-fdg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h90-As-EIJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

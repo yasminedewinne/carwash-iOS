@@ -36,6 +36,25 @@ class APIClient{
         task.resume()
     }
     
+    func postCarwash(carwash: Carwash) {
+        let postCarwashURL = baseURL.appendingPathComponent("carwashes")
+        var request = URLRequest(url: postCarwashURL)
+        let token = UserDefaults.standard.string(forKey: "token") ?? ""
+        let bearerToken = "Bearer \(token)"
+        request.addValue(bearerToken, forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        let data: Carwash = carwash
+        let jsonEncoder = JSONEncoder()
+        let jsonData = try? jsonEncoder.encode(data)
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request){
+            (data, respone, error) in
+        }
+        task.resume()
+    }
+    
     func login(_ login: Login, completion: @escaping(Int?)->Void){
         UserDefaults.standard.set("", forKey: "token")
         UserDefaults.standard.set("", forKey: "email")

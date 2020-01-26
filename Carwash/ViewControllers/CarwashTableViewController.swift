@@ -60,6 +60,12 @@ class CarwashTableViewController: UITableViewController {
     
     @IBAction func unwindToCarwashTableView(segue: UIStoryboardSegue) {
         
+        guard segue.identifier == "saveUnwind",
+            let sourceViewController = segue.source as? AddCarwashTableViewController,
+            let carwash = sourceViewController.carwash else { return }
+        
+        APIClient.shared.postCarwash(carwash: carwash)
+        //self.tableView.reloadData()
     }
 
     /*

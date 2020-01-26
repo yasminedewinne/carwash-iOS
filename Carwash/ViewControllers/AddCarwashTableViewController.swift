@@ -10,38 +10,56 @@ import UIKit
 
 class AddCarwashTableViewController: UITableViewController {
     
+    var carwash: Carwash!
+    
     @IBOutlet var autoTextField: UITextField!
     @IBOutlet var stadTextField: UITextField!
-    @IBOutlet var tariefTextField: UITextField!
+    @IBOutlet var tariefLabel: UILabel!
     @IBOutlet var takenUitlegTextField: UITextField!
+    @IBOutlet var tariefSlider: UISlider!
     @IBOutlet var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         updateSaveButtonState()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     func updateSaveButtonState() {
         let autoText = autoTextField.text ?? ""
         let stadText = stadTextField.text ?? ""
-        let tariefText = tariefTextField.text ?? ""
         let takenUitlegText = takenUitlegTextField.text ?? ""
         
-        saveButton.isEnabled = !autoText.isEmpty && !stadText.isEmpty && !tariefText.isEmpty && !takenUitlegText.isEmpty
+        saveButton.isEnabled = !autoText.isEmpty && !stadText.isEmpty && !takenUitlegText.isEmpty
     }
     
     @IBAction func textEditingChanged(_ sender: UITextField){
         updateSaveButtonState()
     }
+    
+    @IBAction func sliderAdaptsLabel(_ sender: UISlider) {
+        
+        tariefLabel.text = "€ " + String(Int(sender.value))
+    }
+    
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard segue.identifier == "saveUnwind" else {
+            return
+        }
+        
+        let auto = autoTextField.text ?? ""
+        let stad = stadTextField.text ?? ""
+        let tarief = Int(tariefSlider.value)
+        let takenUitleg = takenUitlegTextField.text ?? ""
+        
+        carwash = Carwash(id: 0, auto: auto, stad: stad, tarief: tarief, uitleg: takenUitleg)
+    }
 
     // MARK: - Table view data source
-
 
     /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -90,16 +108,6 @@ class AddCarwashTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     */
 

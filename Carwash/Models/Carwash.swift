@@ -12,7 +12,7 @@ struct Carwash: Codable{
     var id: Int
     var auto: String
     var stad: String
-    var tarief: Double
+    var tarief: Int
     var takenUitleg: String
     //var datumEnUur: NSDate
     
@@ -25,7 +25,7 @@ struct Carwash: Codable{
         //case datumEnUur
     }
     
-    init(id: Int,auto: String, stad: String, tarief: Double, uitleg: String) {
+    init(id: Int,auto: String, stad: String, tarief: Int, uitleg: String) {
         self.id = id
         self.auto = auto
         self.stad = stad
