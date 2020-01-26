@@ -47,6 +47,20 @@ class CarwashTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showCarwashDetail", sender: self)
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CarwashDetailViewController {
+            destination.carwash = carwashes[(tableView.indexPathForSelectedRow!.row)]
+        }
+    }
+    
+    @IBAction func unwindToCarwashTableView(segue: UIStoryboardSegue) {
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -80,16 +94,6 @@ class CarwashTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     */
 

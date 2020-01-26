@@ -10,7 +10,6 @@
 		219ADF52D63059297F976B29 /* Pods_Carwash_CarwashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AADF1EE737724047569ABF /* Pods_Carwash_CarwashUITests.framework */; };
 		6D30E68523D3109E0011A965 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30E68423D3109E0011A965 /* Login.swift */; };
 		6D30E68923D31CC80011A965 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30E68823D31CC80011A965 /* SearchViewController.swift */; };
-		6D30E68B23D31DB70011A965 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30E68A23D31DB70011A965 /* NewViewController.swift */; };
 		6D30E68D23D31E720011A965 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30E68C23D31E720011A965 /* ProfileViewController.swift */; };
 		6D30E68F23D3227B0011A965 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30E68E23D3227B0011A965 /* LoginViewController.swift */; };
 		6D588FE123D2203B006DEB85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D588FE023D2203B006DEB85 /* AppDelegate.swift */; };
@@ -22,6 +21,7 @@
 		6D58900323D2203D006DEB85 /* CarwashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D58900223D2203D006DEB85 /* CarwashUITests.swift */; };
 		6D78029523DC9F1300855424 /* Adres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D78029423DC9F1300855424 /* Adres.swift */; };
 		6D78029723DCA53100855424 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D78029623DCA53100855424 /* User.swift */; };
+		6D78029923DCF18300855424 /* CarwashDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D78029823DCF18300855424 /* CarwashDetailViewController.swift */; };
 		6DB6691723D2314E0032E998 /* Carwash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6691623D2314E0032E998 /* Carwash.swift */; };
 		6DBA9EC823D360660075EC4F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9EC723D360660075EC4F /* APIClient.swift */; };
 		6DBA9ECC23D45C230075EC4F /* CarwashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9ECB23D45C230075EC4F /* CarwashTableViewController.swift */; };
@@ -29,6 +29,7 @@
 		6DBA9ED223D477300075EC4F /* CarwashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9ED123D477300075EC4F /* CarwashController.swift */; };
 		6DBA9ED423D477B10075EC4F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9ED323D477B10075EC4F /* Repository.swift */; };
 		6DBA9ED623D47C890075EC4F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9ED523D47C890075EC4F /* Reachability.swift */; };
+		6DED897723DDACBB0073CA85 /* AddCarwashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED897623DDACBB0073CA85 /* AddCarwashTableViewController.swift */; };
 		E219D9291AE682EBD71FFD72 /* Pods_CarwashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8582B74417936F014E41ED2E /* Pods_CarwashTests.framework */; };
 		E72BC7BAE546B724226CF69F /* Pods_Carwash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE0495755FB2AA34F467C79 /* Pods_Carwash.framework */; };
 /* End PBXBuildFile section */
@@ -61,7 +62,6 @@
 		6B82389FF06562B6DE0F9453 /* Pods-Carwash-CarwashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carwash-CarwashUITests.debug.xcconfig"; path = "Target Support Files/Pods-Carwash-CarwashUITests/Pods-Carwash-CarwashUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D30E68423D3109E0011A965 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		6D30E68823D31CC80011A965 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		6D30E68A23D31DB70011A965 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		6D30E68C23D31E720011A965 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6D30E68E23D3227B0011A965 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6D588FDD23D2203B006DEB85 /* Carwash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carwash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +79,7 @@
 		6D58900423D2203D006DEB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D78029423DC9F1300855424 /* Adres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adres.swift; sourceTree = "<group>"; };
 		6D78029623DCA53100855424 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6D78029823DCF18300855424 /* CarwashDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarwashDetailViewController.swift; sourceTree = "<group>"; };
 		6DB6691623D2314E0032E998 /* Carwash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carwash.swift; sourceTree = "<group>"; };
 		6DBA9EC723D360660075EC4F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		6DBA9ECB23D45C230075EC4F /* CarwashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarwashTableViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		6DBA9ED123D477300075EC4F /* CarwashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarwashController.swift; sourceTree = "<group>"; };
 		6DBA9ED323D477B10075EC4F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		6DBA9ED523D47C890075EC4F /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		6DED897623DDACBB0073CA85 /* AddCarwashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarwashTableViewController.swift; sourceTree = "<group>"; };
 		8582B74417936F014E41ED2E /* Pods_CarwashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarwashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -191,10 +193,11 @@
 			isa = PBXGroup;
 			children = (
 				6D30E68823D31CC80011A965 /* SearchViewController.swift */,
-				6D30E68A23D31DB70011A965 /* NewViewController.swift */,
 				6D30E68C23D31E720011A965 /* ProfileViewController.swift */,
 				6D30E68E23D3227B0011A965 /* LoginViewController.swift */,
 				6DBA9ECB23D45C230075EC4F /* CarwashTableViewController.swift */,
+				6D78029823DCF18300855424 /* CarwashDetailViewController.swift */,
+				6DED897623DDACBB0073CA85 /* AddCarwashTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -459,11 +462,12 @@
 				6D78029523DC9F1300855424 /* Adres.swift in Sources */,
 				6DBA9EC823D360660075EC4F /* APIClient.swift in Sources */,
 				6DBA9ECC23D45C230075EC4F /* CarwashTableViewController.swift in Sources */,
+				6D78029923DCF18300855424 /* CarwashDetailViewController.swift in Sources */,
 				6DBA9ECF23D45EC20075EC4F /* CarwashTableViewCell.swift in Sources */,
-				6D30E68B23D31DB70011A965 /* NewViewController.swift in Sources */,
 				6DBA9ED223D477300075EC4F /* CarwashController.swift in Sources */,
 				6DB6691723D2314E0032E998 /* Carwash.swift in Sources */,
 				6D588FE123D2203B006DEB85 /* AppDelegate.swift in Sources */,
+				6DED897723DDACBB0073CA85 /* AddCarwashTableViewController.swift in Sources */,
 				6D30E68D23D31E720011A965 /* ProfileViewController.swift in Sources */,
 				6D588FE323D2203B006DEB85 /* SceneDelegate.swift in Sources */,
 			);
