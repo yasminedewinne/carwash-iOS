@@ -17,6 +17,8 @@ class AddCarwashTableViewController: UITableViewController {
     @IBOutlet var tariefLabel: UILabel!
     @IBOutlet var takenUitlegTextField: UITextField!
     @IBOutlet var tariefSlider: UISlider!
+    @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var datumEnTijdLabel: UILabel!
     @IBOutlet var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -42,6 +44,13 @@ class AddCarwashTableViewController: UITableViewController {
         tariefLabel.text = "€ " + String(Int(sender.value))
     }
     
+    @IBAction func dateChanged(_ sender: UIDatePicker) {
+        let date = sender.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        datumEnTijdLabel.text = dateFormatter.string(from: date)
+    }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,8 +64,9 @@ class AddCarwashTableViewController: UITableViewController {
         let stad = stadTextField.text ?? ""
         let tarief = Int(tariefSlider.value)
         let takenUitleg = takenUitlegTextField.text ?? ""
+        let datumEnUur = String(datumEnTijdLabel.text ?? "")
         
-        carwash = Carwash(id: 0, auto: auto, stad: stad, tarief: tarief, uitleg: takenUitleg)
+        carwash = Carwash(id: 0, auto: auto, stad: stad, tarief: tarief, uitleg: takenUitleg, datumEnUur: datumEnUur)
     }
 
     // MARK: - Table view data source

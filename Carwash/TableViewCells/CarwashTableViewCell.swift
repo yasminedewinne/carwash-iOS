@@ -10,6 +10,7 @@ import UIKit
 
 class CarwashTableViewCell: UITableViewCell {
 
+    
     @IBOutlet var autoLabel: UILabel!
     @IBOutlet var datumLabel: UILabel!
     
@@ -22,11 +23,7 @@ class CarwashTableViewCell: UITableViewCell {
     }
 
     func update(with carwash: Carwash){
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .short
-        
         autoLabel.text = carwash.auto
-        //datumLabel.text = dateFormatter.string(from: carwash.datumEnUur)
+        datumLabel.text = carwash.datumEnUur
     }
 }

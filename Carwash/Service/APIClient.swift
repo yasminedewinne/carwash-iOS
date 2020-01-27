@@ -71,6 +71,13 @@ class APIClient{
         
         let task = URLSession.shared.dataTask(with: request){
             (data, respone, error) in
+            if let error = error{
+                print("error: \(error)")
+            }else{
+                if let response = respone as? HTTPURLResponse{
+                    print(response.statusCode)
+                }
+            }
         }
         task.resume()
     }

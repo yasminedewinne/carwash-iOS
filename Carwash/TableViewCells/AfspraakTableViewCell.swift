@@ -11,9 +11,11 @@ import UIKit
 class AfspraakTableViewCell: UITableViewCell {
 
     @IBOutlet var autoLabel: UILabel!
+    @IBOutlet var datumEnUurLabel: UILabel!
     @IBOutlet var stadLabel: UILabel!
     @IBOutlet var tariefLabel: UILabel!
     @IBOutlet var uitlegLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +28,7 @@ class AfspraakTableViewCell: UITableViewCell {
     
     func update(with afspraak: Afspraak){
         autoLabel.text = afspraak.carwash.auto
+        datumEnUurLabel.text = afspraak.carwash.datumEnUur
         stadLabel.text = afspraak.carwash.stad
         tariefLabel.text = "€ " + String(afspraak.carwash.tarief)
         uitlegLabel.text = afspraak.carwash.takenUitleg

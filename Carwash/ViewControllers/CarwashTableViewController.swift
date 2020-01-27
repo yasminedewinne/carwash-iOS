@@ -64,7 +64,6 @@ class CarwashTableViewController: UITableViewController {
             let carwash = sourceViewController.carwash else { return }
         
         APIClient.shared.postCarwash(carwash: carwash)
-        //self.tableView.reloadData()
     }
 
     /*
