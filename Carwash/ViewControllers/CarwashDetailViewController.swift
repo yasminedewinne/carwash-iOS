@@ -12,8 +12,18 @@ class CarwashDetailViewController: UIViewController {
 
     var carwash: Carwash!
     
+    @IBOutlet var autoLabel: UILabel!
+    @IBOutlet var stadLabel: UILabel!
+    @IBOutlet var tariefLabel: UILabel!
+    @IBOutlet var uitlegLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        autoLabel.text = carwash.auto
+        stadLabel.text = carwash.stad
+        tariefLabel.text = "€ " + String(carwash.tarief)
+        uitlegLabel.text = carwash.takenUitleg
     }
     
 
