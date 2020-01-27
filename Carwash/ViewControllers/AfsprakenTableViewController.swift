@@ -1,5 +1,5 @@
 //
-//  CarwashTableViewController.swift
+//  AfsprakenTableViewController.swift
 //  Carwash
 //
 //  Created by Yasmine  De Winne on 19/01/2020.
@@ -8,20 +8,20 @@
 
 import UIKit
 
-class CarwashTableViewController: UITableViewController {
-    var carwashes = [Carwash]()
-
+class AfsprakenTableViewController: UITableViewController {
+    var afspraken = [Afspraak]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
-        CarwashController.shared.fetchCarwashes { (carwashes) in
-            self.carwashes = carwashes
+        CarwashController.shared.fetchAfsprakenGebruiker { (afspraken) in
+            self.afspraken = afspraken
             DispatchQueue.main.async { self.tableView.reloadData() }
         }
     }
-    
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,43 +29,31 @@ class CarwashTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return carwashes.count
+        return afspraken.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Step 1: Dequeue the cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CarwashCell", for: indexPath) as! CarwashTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AfspraakCell", for: indexPath) as! AfspraakTableViewCell
         
         //Step 2: Fetch model object to display
-        let carwash = carwashes[indexPath.row]
+        let afspraak = afspraken[indexPath.row]
         
         //Configure the cell
-        cell.update(with: carwash)
+        cell.update(with: afspraak)
         
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showCarwashDetail", sender: self)
+
+    /*
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
+        return cell
     }
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CarwashDetailViewController {
-            destination.carwash = carwashes[(tableView.indexPathForSelectedRow!.row)]
-        }
-    }
-    
-    @IBAction func unwindToCarwashTableView(segue: UIStoryboardSegue) {
-        
-        guard segue.identifier == "saveUnwind",
-            let sourceViewController = segue.source as? AddCarwashTableViewController,
-            let carwash = sourceViewController.carwash else { return }
-        
-        APIClient.shared.postCarwash(carwash: carwash)
-        //self.tableView.reloadData()
-    }
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -99,6 +87,16 @@ class CarwashTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
+    }
+    */
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
     */
 

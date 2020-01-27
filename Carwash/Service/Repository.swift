@@ -16,7 +16,9 @@ class Repository{
     //URL's
     let carwashesArchiveUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("carwashes").appendingPathExtension("plist")
     
-    //Write and read
+    let afsprakenArchiveUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("afsprakengebruiker").appendingPathExtension("plist")
+    
+    //Write and read all carwashes
     func writeCarwashesToFile(carwashes: Array<Carwash>) {
        let encodedCarwashes = try? propertyListEncoder.encode(carwashes)
         try? encodedCarwashes?.write(to: carwashesArchiveUrl, options: .noFileProtection)
@@ -27,5 +29,19 @@ class Repository{
                    return decodedCarwashes
                }
                return Array<Carwash>()
+    }
+    
+    //Write and read all afspraken
+    func writeAfsprakenToFile(afspraken: Array<Afspraak>) {
+        let encodedAfspraken = try? propertyListEncoder.encode(afspraken)
+        try? encodedAfspraken?.write(to: afsprakenArchiveUrl, options: .noFileProtection)
+    }
+    
+    func readAfsprakenFromFile() -> Array<Afspraak>{
+        if let retrievedAfspraken = try? Data(contentsOf: afsprakenArchiveUrl),
+            let decodedAfspraken = try? propertyListDecoder.decode(Array<Afspraak>.self, from: retrievedAfspraken){
+            return decodedAfspraken
+        }
+        return Array<Afspraak>()
     }
 }

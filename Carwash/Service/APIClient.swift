@@ -18,7 +18,6 @@ class APIClient{
         var request = URLRequest(url: carwashURL)
         let token = UserDefaults.standard.string(forKey: "token") ?? ""
         let bearerToken = "Bearer \(token)"
-        print(bearerToken)
         request.addValue(bearerToken, forHTTPHeaderField: "Authorization")
         request.httpMethod = "GET"
         let task = URLSession.shared.dataTask(with: request){
@@ -26,10 +25,31 @@ class APIClient{
             let jsonDecoder = JSONDecoder()
             if let data = data, let carwashes = try? jsonDecoder.decode([Carwash].self, from: data){
                 completion(carwashes)
-                print(data)
                 print("cars \(carwashes)")
             }else{
                 print("nil")
+                completion(nil)
+            }
+        }
+        task.resume()
+    }
+    
+    func fetchAfspraken(completion: @escaping ([Afspraak]?)->Void) {
+        let email = UserDefaults.standard.string(forKey: "email")
+        let userEmail = email!
+        let afspraakURL = baseURL.appendingPathComponent("afspraken/gebruiker/\(userEmail)")
+        var request = URLRequest(url: afspraakURL)
+        let token = UserDefaults.standard.string(forKey: "token") ?? ""
+        let bearerToken = "Bearer \(token)"
+        request.addValue(bearerToken, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: request){
+            (data, response, error) in
+            let jsonDecoder = JSONDecoder()
+            if let data = data, let afspraken = try? jsonDecoder.decode([Afspraak].self, from: data){
+                completion(afspraken)
+                print(afspraken)
+            }else{
                 completion(nil)
             }
         }

@@ -24,4 +24,18 @@ class CarwashController{
             completion(Repository.shared.readCarwashesFromFile())
         }
     }
+    
+    func fetchAfsprakenGebruiker(completion: @escaping([Afspraak])->Void) {
+        if(Reachability.isConnected()){
+            APIClient.shared.fetchAfspraken{
+                (afsprakenService) in
+                if let afsprakenService = afsprakenService{
+                    Repository.shared.writeAfsprakenToFile(afspraken: afsprakenService)
+                    completion(afsprakenService)
+                }
+            }
+        }else{
+            completion(Repository.shared.readAfsprakenFromFile())
+        }
+    }
 }
