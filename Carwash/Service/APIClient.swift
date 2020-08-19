@@ -11,7 +11,7 @@ import Foundation
 class APIClient{
     
     static let shared = APIClient()
-    let baseURL = URL(string: "https://carwashapi.azurewebsites.net/api/")!
+    let baseURL = URL(string: "https://carwashapi20200630213929.azurewebsites.net/api/")!
     
     func fetchCarwashes(completion: @escaping ([Carwash]?) -> Void) {
         let carwashURL = baseURL.appendingPathComponent("carwashes")
