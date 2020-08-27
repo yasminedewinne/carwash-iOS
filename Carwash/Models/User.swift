@@ -13,7 +13,7 @@ struct User: Codable {
     var voornaam: String
     var familienaam: String
     var email: String
-    var telefoonNr: String
+    var phoneNumber: String
     var adres: Adres
     
     enum CodingKeys: String, CodingKey{
@@ -21,7 +21,7 @@ struct User: Codable {
         case voornaam
         case familienaam
         case email
-        case telefoonNr
+        case phoneNumber
         case adres
     }
 }

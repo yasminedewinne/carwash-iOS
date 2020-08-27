@@ -14,7 +14,7 @@ struct Carwash: Codable{
     var takenlijst: String
     var datumEnUur: String
     var gebruikerId: Int
-    //var gebruiker: User
+    var gebruiker: User
     var autoId: Int
     var auto: Auto
     
@@ -24,7 +24,7 @@ struct Carwash: Codable{
         case takenlijst
         case datumEnUur
         case gebruikerId
-        //case gebruiker
+        case gebruiker
         case auto
         case autoId
         

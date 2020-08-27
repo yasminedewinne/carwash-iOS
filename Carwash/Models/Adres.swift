@@ -9,9 +9,9 @@
 import Foundation
 
 struct Adres: Codable {
-    var huisNr: Int
+    var huisNr: String
     var straatNaam: String
-    var postcode: Int
+    var postcode: String
     var stad: String
     var land: String
     
@@ -23,7 +23,7 @@ struct Adres: Codable {
         case land
     }
     
-    init(huisNr: Int, straatNaam: String, postcode: Int, stad: String, land: String) {
+    init(huisNr: String, straatNaam: String, postcode: String, stad: String, land: String) {
         self.huisNr = huisNr
         self.straatNaam = straatNaam
         self.postcode = postcode

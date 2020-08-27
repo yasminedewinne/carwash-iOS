@@ -11,13 +11,14 @@ import Foundation
 struct Afspraak: Codable {
     var id: Int
     var gebruikerId: Int
-    //var gebruiker: User
+    var gebruiker: User
     var carwashId: Int
     var carwash: Carwash
     
     enum CodingKeys: String, CodingKey{
         case id
         case gebruikerId
+        case gebruiker
         case carwashId
         case carwash
     }

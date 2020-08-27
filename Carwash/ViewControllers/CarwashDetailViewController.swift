@@ -23,7 +23,7 @@ class CarwashDetailViewController: UIViewController {
         super.viewDidLoad()
         autoLabel.text = carwash.auto.merk + " " + carwash.auto.naam
         datumEnUurLabel.text = carwash.datumEnUur
-        //stadLabel.text = carwash.stad
+        stadLabel.text = "Regio " + carwash.gebruiker.adres.stad
         tariefLabel.text = "€ " + String(carwash.tarief)
         uitlegLabel.text = carwash.takenlijst
     }
