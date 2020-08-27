@@ -11,7 +11,7 @@ import Foundation
 class APIClient{
     
     static let shared = APIClient()
-    let baseURL = URL(string: "https://carwashapi20200630213929.azurewebsites.net/api/")!
+    let baseURL = URL(string: "https://carwashapiios.azurewebsites.net/api/")!
     
     func fetchCarwashes(completion: @escaping ([Carwash]?) -> Void) {
         let carwashURL = baseURL.appendingPathComponent("carwashes")
@@ -27,7 +27,7 @@ class APIClient{
                 completion(carwashes)
                 print("cars \(carwashes)")
             }else{
-                print("nil")
+                print("Niet gelukt om carwashes op te halen")
                 completion(nil)
             }
         }
@@ -48,9 +48,10 @@ class APIClient{
             let jsonDecoder = JSONDecoder()
             if let data = data, let afspraken = try? jsonDecoder.decode([Afspraak].self, from: data){
                 completion(afspraken)
-                print(afspraken)
+                print("afspraken \(afspraken)")
             }else{
                 completion(nil)
+                print("Niet gelukt om afspraken op te halen")
             }
         }
         task.resume()

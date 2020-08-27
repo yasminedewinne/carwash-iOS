@@ -1,31 +1,32 @@
 //
-//  Afspraak.swift
+//  Auto.swift
 //  Carwash
 //
-//  Created by Yasmine  De Winne on 19/01/2020.
+//  Created by Yasmine  De Winne on 27/08/2020.
 //  Copyright © 2020 Yasmine  De Winne. All rights reserved.
 //
 
 import Foundation
 
-struct Afspraak: Codable {
+struct Auto: Codable{
     var id: Int
+    var merk: String
+    var naam: String
     var gebruikerId: Int
     //var gebruiker: User
-    var carwashId: Int
-    var carwash: Carwash
     
     enum CodingKeys: String, CodingKey{
         case id
+        case merk
+        case naam
         case gebruikerId
-        case carwashId
-        case carwash
+        //case gebruiker
     }
     
-    /*init(id: Int, carwash: Carwash, carwashId: Int, gebruikerId: Int) {
+    /*init(id: Int, merk: String, naam: String, gebruikerId: Int) {
         self.id = id
-        self.carwash = carwash
-        self.carwashId = carwashId
+        self.merk = merk
+        self.naam = naam
         self.gebruikerId = gebruikerId
     }*/
 }

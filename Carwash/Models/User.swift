@@ -9,6 +9,7 @@
 import Foundation
 
 struct User: Codable {
+    var id: Int
     var voornaam: String
     var familienaam: String
     var email: String
@@ -16,6 +17,7 @@ struct User: Codable {
     var adres: Adres
     
     enum CodingKeys: String, CodingKey{
+        case id
         case voornaam
         case familienaam
         case email

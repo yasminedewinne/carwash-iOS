@@ -21,10 +21,10 @@ class CarwashDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        autoLabel.text = carwash.auto
+        autoLabel.text = carwash.auto.merk + " " + carwash.auto.naam
         datumEnUurLabel.text = carwash.datumEnUur
-        stadLabel.text = carwash.stad
+        //stadLabel.text = carwash.stad
         tariefLabel.text = "€ " + String(carwash.tarief)
-        uitlegLabel.text = carwash.takenUitleg
+        uitlegLabel.text = carwash.takenlijst
     }
 }

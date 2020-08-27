@@ -60,12 +60,10 @@ class AddCarwashTableViewController: UITableViewController {
             return
         }
         
-        let auto = autoTextField.text ?? ""
-        let stad = stadTextField.text ?? ""
         let tarief = Int(tariefSlider.value)
-        let takenUitleg = takenUitlegTextField.text ?? ""
+        let takenlijst = takenUitlegTextField.text ?? ""
         let datumEnUur = String(datumEnTijdLabel.text ?? "")
         
-        carwash = Carwash(id: 0, auto: auto, stad: stad, tarief: tarief, uitleg: takenUitleg, datumEnUur: datumEnUur)
+        //carwash = Carwash(id: 0, tarief: tarief, uitleg: takenlijst, datumEnUur: datumEnUur, gebruikerId: 0, autoId: 0)
     }
 }
