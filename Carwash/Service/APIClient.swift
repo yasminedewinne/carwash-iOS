@@ -137,5 +137,37 @@ class APIClient{
         }
         task.resume()
     }
+    
+    func register(_ register: Register, completion: @escaping(Int?)->Void){
+        UserDefaults.standard.set("", forKey: "token")
+        UserDefaults.standard.set("", forKey: "email")
+        let registerUrl = baseURL.appendingPathComponent("auth/register")
+        var request = URLRequest(url: registerUrl)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONEncoder().encode(register)
+        let task = URLSession.shared.dataTask(with: request){ (data, response, error) in
+            if let error = error{
+                print("error: \(error)")
+            }else{
+                if let response = response as? HTTPURLResponse{
+                    print("statusCode: \(response.statusCode)")
+                }
+                if let data = data, let response =  response as? HTTPURLResponse{
+                    var dataString = String(decoding: data, as: UTF8.self)
+                    dataString.remove(at: dataString.startIndex)
+                    dataString = String(dataString.dropLast())
+                    
+                    UserDefaults.standard.set(dataString, forKey: "token")
+                    UserDefaults.standard.set(register.email, forKey: "email")
+                    completion(response.statusCode)
+                } else {
+                    print("nil")
+                    completion(nil)
+                }
+            }
+        }
+        task.resume()
+    }
 }
 
