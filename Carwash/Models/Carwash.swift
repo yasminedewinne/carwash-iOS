@@ -14,9 +14,9 @@ struct Carwash: Codable{
     var takenlijst: String
     var datumEnUur: String
     var gebruikerId: Int
-    var gebruiker: User
+    var gebruiker: User?
     var autoId: Int
-    var auto: Auto
+    var auto: Auto?
     
     enum CodingKeys: String, CodingKey{
         case id
@@ -30,12 +30,12 @@ struct Carwash: Codable{
         
     }
     
-    /*init(id: Int, tarief: Int, uitleg: String, datumEnUur: String, gebruikerId: Int, autoId: Int) {
+    init(id: Int, tarief: Int, uitleg: String, datumEnUur: String, gebruikerId: Int, autoId: Int) {
         self.id = id
         self.tarief = tarief
         self.takenlijst = uitleg
         self.datumEnUur = datumEnUur
         self.gebruikerId = gebruikerId
         self.autoId = autoId
-    }*/
+    }
 }

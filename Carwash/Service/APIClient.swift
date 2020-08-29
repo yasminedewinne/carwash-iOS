@@ -57,6 +57,29 @@ class APIClient{
         task.resume()
     }
     
+    func fetchAutos(completion: @escaping([Auto]?)->Void){
+        let email = UserDefaults.standard.string(forKey: "email")
+        let userEmail = email!
+        let autoURL = baseURL.appendingPathComponent("auto/gebruiker/\(userEmail)")
+        var request = URLRequest(url: autoURL)
+        let token = UserDefaults.standard.string(forKey: "token") ?? ""
+        let bearerToken = "Bearer \(token)"
+        request.addValue(bearerToken, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: request){
+            (data, response, error) in
+            let jsonDecoder = JSONDecoder()
+            if let data = data, let autos = try? jsonDecoder.decode([Auto].self, from: data){
+                completion(autos)
+                print("auto's \(autos)")
+            }else{
+                completion(nil)
+                print("Niet gelukt om auto's op te halen")
+            }
+        }
+        task.resume()
+    }
+    
     func postCarwash(carwash: Carwash) {
         let postCarwashURL = baseURL.appendingPathComponent("carwashes")
         var request = URLRequest(url: postCarwashURL)

@@ -26,9 +26,9 @@ class AfspraakTableViewCell: UITableViewCell {
     }
     
     func update(with afspraak: Afspraak){
-        autoLabel.text = afspraak.carwash.auto.merk + " " + afspraak.carwash.auto.naam
+        autoLabel.text = afspraak.carwash.auto!.merk + " " + afspraak.carwash.auto!.naam
         datumEnUurLabel.text = afspraak.carwash.datumEnUur
-        stadLabel.text = "Regio " + afspraak.carwash.gebruiker.adres.stad
+        stadLabel.text = "Regio " + afspraak.carwash.gebruiker!.adres.stad
         tariefLabel.text = "€ " + String(afspraak.carwash.tarief)
         uitlegLabel.text = afspraak.carwash.takenlijst
     }

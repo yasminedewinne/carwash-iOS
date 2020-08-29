@@ -23,7 +23,7 @@ class CarwashTableViewCell: UITableViewCell {
     }
 
     func update(with carwash: Carwash){
-        autoLabel.text = carwash.auto.merk + " " + carwash.auto.naam
+        autoLabel.text = carwash.auto!.merk + " " + carwash.auto!.naam
         datumLabel.text = carwash.datumEnUur
     }
 }

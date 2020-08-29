@@ -8,12 +8,14 @@
 
 import UIKit
 
-class AddCarwashTableViewController: UITableViewController {
+class AddCarwashTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var carwash: Carwash!
+    var autos : [Auto] = [Auto]()
+    var selectedAuto: Int = 0
+    var gebruikerId: Int = 0
     
-    @IBOutlet var autoTextField: UITextField!
-    @IBOutlet var stadTextField: UITextField!
+    @IBOutlet var autoPicker: UIPickerView!
     @IBOutlet var tariefLabel: UILabel!
     @IBOutlet var takenUitlegTextField: UITextField!
     @IBOutlet var tariefSlider: UISlider!
@@ -23,16 +25,49 @@ class AddCarwashTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Connect data to autoPicker:
+        self.autoPicker.delegate = self
+        self.autoPicker.dataSource = self
+        
         updateSaveButtonState()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        CarwashController.shared.fetchAutosGebruiker { (autos) in
+            self.autos = autos
+            DispatchQueue.main.async { self.tableView.reloadData() }
+            print("here", self.autos)
+        }
+    }
+    
+    //Code voor PickerView
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        sleep(1)
+        print(self.autos, "yo")
+        return self.autos.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.autos[row].merk + " " + self.autos[row].naam
+    }
+    
+    // Capture the picker view selection
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.selectedAuto = autos[row].id
+        self.gebruikerId = autos[row].gebruikerId
+    }
+    //Einde code voor PickerView
+    
     func updateSaveButtonState() {
-        let autoText = autoTextField.text ?? ""
-        let stadText = stadTextField.text ?? ""
+        //let stadText = stadTextField.text ?? ""
         let takenUitlegText = takenUitlegTextField.text ?? ""
         
-        saveButton.isEnabled = !autoText.isEmpty && !stadText.isEmpty && !takenUitlegText.isEmpty
+        saveButton.isEnabled = !takenUitlegText.isEmpty
     }
     
     @IBAction func textEditingChanged(_ sender: UITextField){
@@ -63,7 +98,9 @@ class AddCarwashTableViewController: UITableViewController {
         let tarief = Int(tariefSlider.value)
         let takenlijst = takenUitlegTextField.text ?? ""
         let datumEnUur = String(datumEnTijdLabel.text ?? "")
+        let autoId = self.selectedAuto
+        let gebruikerId = self.gebruikerId
         
-        //carwash = Carwash(id: 0, tarief: tarief, uitleg: takenlijst, datumEnUur: datumEnUur, gebruikerId: 0, autoId: 0)
+        carwash = Carwash(id: 0, tarief: tarief, uitleg: takenlijst, datumEnUur: datumEnUur, gebruikerId: gebruikerId, autoId: autoId)
     }
 }

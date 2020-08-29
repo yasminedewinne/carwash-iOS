@@ -25,49 +25,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your car" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="480-lX-k4Q" userLabel="Car Text Field">
-                                                    <rect key="frame" x="5" y="5" width="404" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <action selector="textEditingChanged:" destination="7Nk-N9-q4C" eventType="editingChanged" id="wC5-HU-oNQ"/>
-                                                    </connections>
-                                                </textField>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I45-27-sc8">
+                                                    <rect key="frame" x="0.0" y="-86" width="414" height="216"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                </pickerView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="480-lX-k4Q" secondAttribute="trailing" constant="5" id="23I-KV-8rb"/>
-                                                <constraint firstItem="480-lX-k4Q" firstAttribute="top" secondItem="TYq-n3-9Rx" secondAttribute="top" constant="5" id="hQU-H6-pc4"/>
-                                                <constraint firstAttribute="bottom" secondItem="480-lX-k4Q" secondAttribute="bottom" constant="5" id="zS2-Iz-pJt"/>
-                                                <constraint firstItem="480-lX-k4Q" firstAttribute="leading" secondItem="TYq-n3-9Rx" secondAttribute="leading" constant="5" id="zq1-qM-UdD"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="City" id="IqH-Ob-0LL">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mAH-X0-Lvp">
-                                        <rect key="frame" x="0.0" y="155" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mAH-X0-Lvp" id="Tmr-Wu-MJq">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kev-VL-o3o" userLabel="City Text Field">
-                                                    <rect key="frame" x="5" y="5" width="404" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <action selector="textEditingChanged:" destination="7Nk-N9-q4C" eventType="editingChanged" id="YlT-Eo-fk7"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="kev-VL-o3o" firstAttribute="top" secondItem="Tmr-Wu-MJq" secondAttribute="top" constant="5" id="6GN-3b-wpB"/>
-                                                <constraint firstItem="kev-VL-o3o" firstAttribute="leading" secondItem="Tmr-Wu-MJq" secondAttribute="leading" constant="5" id="aWu-nO-IPw"/>
-                                                <constraint firstAttribute="bottom" secondItem="kev-VL-o3o" secondAttribute="bottom" constant="5" id="oEf-fE-TXe"/>
-                                                <constraint firstAttribute="trailing" secondItem="kev-VL-o3o" secondAttribute="trailing" constant="5" id="sQV-Ao-7Z7"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -75,7 +37,7 @@
                             <tableViewSection headerTitle="Rate" id="g07-eX-v72">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Dp4-LY-wSS">
-                                        <rect key="frame" x="0.0" y="254.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="155" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dp4-LY-wSS" id="dEl-4k-0fh">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -116,7 +78,7 @@
                             <tableViewSection headerTitle="Further explanation" id="TwH-bO-diN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FE8-64-hgS">
-                                        <rect key="frame" x="0.0" y="354" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="254.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FE8-64-hgS" id="mFV-jU-fQt">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -144,7 +106,7 @@
                             <tableViewSection headerTitle="Date and Time" id="c4T-mV-qFX">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vvc-Ha-AGi">
-                                        <rect key="frame" x="0.0" y="453.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="354" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vvc-Ha-AGi" id="wvc-ra-FIP">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -202,11 +164,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="autoTextField" destination="480-lX-k4Q" id="k5i-Wh-J7d"/>
+                        <outlet property="autoPicker" destination="I45-27-sc8" id="ZGd-id-Kf5"/>
                         <outlet property="datePicker" destination="922-Qf-bGL" id="Sv2-xw-q51"/>
                         <outlet property="datumEnTijdLabel" destination="nmO-iw-m5p" id="CvP-gr-h1y"/>
                         <outlet property="saveButton" destination="EJ2-V2-W3e" id="AgV-kr-cJU"/>
-                        <outlet property="stadTextField" destination="kev-VL-o3o" id="vaw-oP-l2j"/>
                         <outlet property="takenUitlegTextField" destination="ymZ-O3-3ph" id="nEx-Bd-qgn"/>
                         <outlet property="tariefLabel" destination="u3t-ia-BFE" id="3EK-Pa-QAV"/>
                         <outlet property="tariefSlider" destination="4pU-eu-Cfu" id="h5w-pg-fdg"/>
