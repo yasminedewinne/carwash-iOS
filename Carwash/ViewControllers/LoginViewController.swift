@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBOutlet var signUpButton: UIButton!
     
     @IBAction func LogInClicked() {
         
@@ -39,4 +40,5 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
 }

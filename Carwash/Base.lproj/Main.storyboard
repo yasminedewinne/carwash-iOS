@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dIW-tV-wCs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tlh-pp-pX9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -26,7 +26,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I45-27-sc8">
-                                                    <rect key="frame" x="0.0" y="-86" width="414" height="216"/>
+                                                    <rect key="frame" x="-1" y="-86" width="415" height="216"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 </pickerView>
                                             </subviews>
@@ -369,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFf-Zp-xId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1277" y="-5"/>
+            <point key="canvasLocation" x="2186.9565217391305" y="-5.3571428571428568"/>
         </scene>
         <!--My Appointments-->
         <scene sceneID="GFo-z2-fId">
@@ -453,7 +453,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNa-29-fv1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="831"/>
+            <point key="canvasLocation" x="4031.884057971015" y="830.35714285714278"/>
         </scene>
         <!--Profile-->
         <scene sceneID="imH-fU-neT">
@@ -470,7 +470,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jl-0b-1pO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1277" y="830"/>
+            <point key="canvasLocation" x="3097.1014492753625" y="829.6875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZOT-9W-ZHa">
@@ -490,9 +490,9 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Mo-PS-qZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Log in-->
         <scene sceneID="8Iq-YQ-uXg">
             <objects>
                 <viewController id="dIW-tV-wCs" customClass="LoginViewController" customModule="Carwash" customModuleProvider="target" sceneMemberID="viewController">
@@ -501,7 +501,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yob-Ng-fda">
-                                <rect key="frame" x="10" y="94" width="394" height="68"/>
+                                <rect key="frame" x="10" y="138" width="394" height="68"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rVU-uc-AEa">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="68"/>
@@ -527,6 +527,14 @@
                                     <action selector="LogInClicked" destination="dIW-tV-wCs" eventType="touchUpInside" id="G1s-zI-eW2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8o-UE-oHZ">
+                                <rect key="frame" x="181" y="530" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <segue destination="S9O-5y-O16" kind="show" id="Oyi-96-ILU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -539,17 +547,53 @@
                         <viewLayoutGuide key="safeArea" id="Pwi-SG-FVk"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Log in" id="5Ru-gq-iFR"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailTextField" destination="A7n-qh-S8K" id="cfk-Dx-3Gi"/>
                         <outlet property="logInButton" destination="fO9-Uy-oOP" id="Beb-Us-7dE"/>
+                        <outlet property="signUpButton" destination="F8o-UE-oHZ" id="HfL-Ff-0rW"/>
                         <outlet property="wachtwoordTextField" destination="EV5-RC-KPn" id="aNz-6w-JES"/>
                         <segue destination="pTS-Ug-ObB" kind="presentation" identifier="LogIn" modalPresentationStyle="fullScreen" id="Gui-2f-jfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJJ-E0-nUU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-906" y="130"/>
+            <point key="canvasLocation" x="2.8985507246376816" y="129.91071428571428"/>
+        </scene>
+        <!--Sign up-->
+        <scene sceneID="H8d-TS-4FG">
+            <objects>
+                <viewController id="S9O-5y-O16" customClass="RegisterViewController" customModule="Carwash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TPH-Se-VxU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tLK-Fl-Ijf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign up" id="yT8-2e-GWd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PrS-HW-Lc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="885"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RbU-uu-bpk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tlh-pp-pX9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OR6-57-Joy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dIW-tV-wCs" kind="relationship" relationship="rootViewController" id="EUC-88-hPy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8T-w3-vPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-907.24637681159425" y="129.91071428571428"/>
         </scene>
     </scenes>
     <resources>
