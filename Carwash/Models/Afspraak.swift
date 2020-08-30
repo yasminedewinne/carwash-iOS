@@ -11,9 +11,9 @@ import Foundation
 struct Afspraak: Codable {
     var id: Int
     var gebruikerId: Int
-    var gebruiker: User
+    var gebruiker: User?
     var carwashId: Int
-    var carwash: Carwash
+    var carwash: Carwash?
     
     enum CodingKeys: String, CodingKey{
         case id
@@ -23,10 +23,9 @@ struct Afspraak: Codable {
         case carwash
     }
     
-    /*init(id: Int, carwash: Carwash, carwashId: Int, gebruikerId: Int) {
+    init(id: Int, gebruikerId: Int, carwashId: Int) {
         self.id = id
-        self.carwash = carwash
         self.carwashId = carwashId
         self.gebruikerId = gebruikerId
-    }*/
+    }
 }

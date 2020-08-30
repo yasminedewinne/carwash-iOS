@@ -17,6 +17,7 @@ class CarwashDetailViewController: UIViewController {
     @IBOutlet var stadLabel: UILabel!
     @IBOutlet var tariefLabel: UILabel!
     @IBOutlet var uitlegLabel: UILabel!
+    @IBOutlet var afspraakButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -27,4 +28,19 @@ class CarwashDetailViewController: UIViewController {
         tariefLabel.text = "€ " + String(carwash.tarief)
         uitlegLabel.text = carwash.takenlijst
     }
+    
+    @IBAction func afspraakButtonClicked() {
+        
+        let afspraak = Afspraak(id: 0, gebruikerId: 0, carwashId: carwash.id)
+        APIClient.shared.postAfspraak(afspraak: afspraak)
+        
+        let alert = UIAlertController(title: "New appointment", message: "Go to My Appointments to see this new appointment.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
+        
+    }
+    
+    
 }

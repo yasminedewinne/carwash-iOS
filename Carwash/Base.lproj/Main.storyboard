@@ -26,7 +26,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I45-27-sc8">
-                                                    <rect key="frame" x="-1" y="-86" width="415" height="216"/>
+                                                    <rect key="frame" x="-2" y="-86" width="416" height="216"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 </pickerView>
                                             </subviews>
@@ -317,6 +317,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYh-I2-vZf">
+                                <rect key="frame" x="152" y="278" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Appointment"/>
+                                <connections>
+                                    <action selector="afspraakButtonClicked" destination="Kkd-Jf-3dx" eventType="touchUpInside" id="iLR-Bu-xbn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -327,6 +335,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9nc-Ym-bh0"/>
                     <connections>
+                        <outlet property="afspraakButton" destination="nYh-I2-vZf" id="H5f-F5-cxS"/>
                         <outlet property="autoLabel" destination="Eq7-gP-yoc" id="mFW-Od-SB0"/>
                         <outlet property="datumEnUurLabel" destination="f00-Vt-BvN" id="1td-49-V0b"/>
                         <outlet property="stadLabel" destination="HFZ-co-LKp" id="2eQ-RD-y3G"/>
@@ -453,7 +462,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNa-29-fv1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4031.884057971015" y="830.35714285714278"/>
+            <point key="canvasLocation" x="4217" y="830"/>
         </scene>
         <!--Profile-->
         <scene sceneID="imH-fU-neT">
