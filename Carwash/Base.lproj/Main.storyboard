@@ -26,7 +26,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I45-27-sc8">
-                                                    <rect key="frame" x="-2" y="-86" width="416" height="216"/>
+                                                    <rect key="frame" x="-3" y="-86" width="416" height="216"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 </pickerView>
                                             </subviews>
@@ -462,13 +462,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNa-29-fv1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4217" y="830"/>
+            <point key="canvasLocation" x="3528" y="830"/>
         </scene>
-        <!--Profile-->
+        <!--Appointments-->
         <scene sceneID="imH-fU-neT">
             <objects>
                 <navigationController id="npj-fk-PPH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="4Ug-ig-9m6"/>
+                    <tabBarItem key="tabBarItem" title="Appointments" image="calendar" catalog="system" id="4Ug-ig-9m6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g9I-Uy-vxV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -479,7 +479,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jl-0b-1pO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3097.1014492753625" y="829.6875"/>
+            <point key="canvasLocation" x="2212" y="830"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZOT-9W-ZHa">
@@ -495,11 +495,12 @@
                         <segue destination="xW5-VZ-aei" kind="relationship" relationship="viewControllers" id="r8s-sM-hoY"/>
                         <segue destination="9YX-Au-2kj" kind="relationship" relationship="viewControllers" id="Bo1-zu-7oZ"/>
                         <segue destination="npj-fk-PPH" kind="relationship" relationship="viewControllers" id="BrZ-QL-Y1W"/>
+                        <segue destination="9e6-On-Jnt" kind="relationship" relationship="viewControllers" id="O67-aX-L9l"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Mo-PS-qZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+            <point key="canvasLocation" x="1080" y="130"/>
         </scene>
         <!--Log in-->
         <scene sceneID="8Iq-YQ-uXg">
@@ -693,6 +694,36 @@
             </objects>
             <point key="canvasLocation" x="3" y="885"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="xRF-Nf-7LF">
+            <objects>
+                <viewController id="9e6-On-Jnt" customClass="ProfileViewController" customModule="Carwash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qtb-x1-L6k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uN0-B5-w1i">
+                                <rect key="frame" x="181" y="675" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logOutClicked" destination="9e6-On-Jnt" eventType="touchUpInside" id="9sf-xv-qDY"/>
+                                    <segue destination="Tlh-pp-pX9" kind="presentation" identifier="SignOut" modalPresentationStyle="fullScreen" id="T2L-ES-SI9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ULa-rE-VP1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="Dk8-U0-2GK"/>
+                    <connections>
+                        <outlet property="logOutButton" destination="uN0-B5-w1i" id="AEV-EZ-lCC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cD0-81-iEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="1625"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="RbU-uu-bpk">
             <objects>
@@ -713,6 +744,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="car" catalog="system" width="64" height="46"/>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
