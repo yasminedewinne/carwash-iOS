@@ -11,10 +11,13 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet var logOutButton: UIButton!
+    @IBOutlet var emailLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let email = UserDefaults.standard.string(forKey: "email")
+        emailLabel.text = "Hallo " + email! + "!"
         // Do any additional setup after loading the view.
     }
     
