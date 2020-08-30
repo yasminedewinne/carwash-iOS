@@ -132,6 +132,27 @@ class APIClient{
         task.resume()
     }
     
+    func deleteAfspraak(afspraakId: Int) {
+        let deleteAfspraakURL = baseURL.appendingPathComponent("afspraken/\(afspraakId)")
+        var request = URLRequest(url: deleteAfspraakURL)
+        let token = UserDefaults.standard.string(forKey: "token") ?? ""
+        let bearerToken = "Bearer \(token)"
+        request.addValue(bearerToken, forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "DELETE"
+        let task = URLSession.shared.dataTask(with: request){
+            (data, respone, error) in
+            if let error = error{
+                print("error: \(error)")
+            }else{
+                if let response = respone as? HTTPURLResponse{
+                    print(response.statusCode)
+                }
+            }
+        }
+        task.resume()
+    }
+    
     func login(_ login: Login, completion: @escaping(Int?)->Void){
         UserDefaults.standard.set("", forKey: "token")
         UserDefaults.standard.set("", forKey: "email")
