@@ -1,8 +1,11 @@
 # carwash-iOS
+- Native Apps iOS -
+
 Deze applicatie heeft als doel dat iemand zijn auto kan aanbieden om gewassen te worden, buurtbewoners kunnen daar op ingaan en zich aanbieden om de auto te komen wassen. 
 
-Aanmelden kan via: 
+## Running code
+Stap 1: Clone het project in een lokale map 
 
-Email: yasminedw@icloud.com
+Stap 2: Open het project in XCode en run de code
 
-Wachtwoord: UserWachtwoord
+Stap 3: Aanmelden kan met email "yasminedw@icloud.com" en wachtwoord "UserWachtwoord"
