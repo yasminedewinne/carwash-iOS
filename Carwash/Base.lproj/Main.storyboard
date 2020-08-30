@@ -59,6 +59,7 @@
                                                         </label>
                                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="4pU-eu-Cfu">
                                                             <rect key="frame" x="29.5" y="0.0" width="376.5" height="34.5"/>
+                                                            <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
                                                                 <action selector="sliderAdaptsLabel:" destination="7Nk-N9-q4C" eventType="valueChanged" id="UfM-Wz-G56"/>
                                                             </connections>
@@ -235,10 +236,10 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="5CE-RV-647" firstAttribute="top" secondItem="kR5-hU-KYC" secondAttribute="topMargin" id="XD7-Uw-EuR"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="5CE-RV-647" secondAttribute="trailing" id="e3K-RT-6rM"/>
-                                        <constraint firstItem="5CE-RV-647" firstAttribute="leading" secondItem="kR5-hU-KYC" secondAttribute="leadingMargin" id="qtP-gv-6p7"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="5CE-RV-647" secondAttribute="bottom" id="tAV-Kt-Lsj"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5CE-RV-647" secondAttribute="trailing" id="F3w-RN-pXA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5CE-RV-647" secondAttribute="bottom" id="O09-eq-CzE"/>
+                                        <constraint firstItem="5CE-RV-647" firstAttribute="top" secondItem="kR5-hU-KYC" secondAttribute="topMargin" id="nCd-90-9iM"/>
+                                        <constraint firstItem="5CE-RV-647" firstAttribute="leading" secondItem="kR5-hU-KYC" secondAttribute="leadingMargin" id="pOS-DG-bSC"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -422,7 +423,18 @@
                     <view key="view" contentMode="scaleToFill" id="72R-Or-2Gj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coming-Soon" translatesAutoresizingMaskIntoConstraints="NO" id="t1J-1I-Fx9">
+                                <rect key="frame" x="10" y="44" width="394" height="852"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="t1J-1I-Fx9" firstAttribute="top" secondItem="POQ-88-pKP" secondAttribute="top" id="7nx-Ve-Ksk"/>
+                            <constraint firstItem="POQ-88-pKP" firstAttribute="trailing" secondItem="t1J-1I-Fx9" secondAttribute="trailing" constant="10" id="FlQ-Jj-ge9"/>
+                            <constraint firstAttribute="bottom" secondItem="t1J-1I-Fx9" secondAttribute="bottom" id="Sl6-mY-1Vx"/>
+                            <constraint firstItem="t1J-1I-Fx9" firstAttribute="leading" secondItem="POQ-88-pKP" secondAttribute="leading" constant="10" id="dDe-Zx-KdM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="POQ-88-pKP"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="fRo-IY-n96"/>
@@ -863,6 +875,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Coming-Soon" width="5113" height="1878"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="car" catalog="system" width="64" height="46"/>
         <image name="logo_carwash" width="712" height="134"/>

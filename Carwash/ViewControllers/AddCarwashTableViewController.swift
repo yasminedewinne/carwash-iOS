@@ -36,8 +36,7 @@ class AddCarwashTableViewController: UITableViewController, UIPickerViewDelegate
     override func viewWillAppear(_ animated: Bool) {
         CarwashController.shared.fetchAutosGebruiker { (autos) in
             self.autos = autos
-            DispatchQueue.main.async { self.tableView.reloadData() }
-            print("here", self.autos)
+            DispatchQueue.main.async { self.autoPicker.reloadAllComponents() }
         }
     }
     
@@ -47,8 +46,6 @@ class AddCarwashTableViewController: UITableViewController, UIPickerViewDelegate
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        sleep(1)
-        print(self.autos, "yo")
         return self.autos.count
     }
     
