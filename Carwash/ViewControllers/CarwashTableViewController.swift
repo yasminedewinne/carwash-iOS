@@ -16,9 +16,13 @@ class CarwashTableViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         CarwashController.shared.fetchCarwashes { (carwashes) in
             self.carwashes = carwashes
-            DispatchQueue.main.async { self.tableView.reloadData() }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.animateTable()
+            }
         }
     }
     
@@ -64,5 +68,24 @@ class CarwashTableViewController: UITableViewController {
             let carwash = sourceViewController.carwash else { return }
         
         APIClient.shared.postCarwash(carwash: carwash)
+    }
+    
+    func animateTable() {
+        tableView.reloadData()
+        let cells = tableView.visibleCells
+        
+        let tableViewHeight = tableView.bounds.size.height
+        
+        for cell in cells{
+            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
+        }
+        
+        var delayCounter = 0
+        for cell in cells{
+            UIView.animate(withDuration: 1.60, delay: Double(delayCounter)*0.04, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                cell.transform = CGAffineTransform.identity
+            }, completion: nil)
+            delayCounter += 1
+        }
     }
 }
